@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:e2e": "npx playwright test",
+    "debug:e2e": "PWDEBUG=1 npx playwright test --project=chromium --workers=1",
     "serve:report": "npx playwright show-report"
   },
   "repository": {
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/jsbisht/playwright-e2e-setup#readme",
   "dependencies": {
-    "@playwright/test": "^1.20.2"
+    "@playwright/test": "^1.20.2",
+    "playwright": "^1.20.2"
   }
 }
