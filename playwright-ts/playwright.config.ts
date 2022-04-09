@@ -1,5 +1,5 @@
-// @ts-check
-const { devices } = require("@playwright/test");
+import type { PlaywrightTestConfig } from "@playwright/test";
+import { devices } from "@playwright/test";
 
 /**
  * Read environment variables from file.
@@ -8,11 +8,11 @@ const { devices } = require("@playwright/test");
 // require('dotenv').config();
 
 /**
- * @see https://playwright.dev/docs/test-configuration
- * @type {import('@playwright/test').PlaywrightTestConfig}
+ * See https://playwright.dev/docs/test-configuration.
  */
-const config = {
-  testDir: "./test-e2e",
+const config: PlaywrightTestConfig = {
+  testDir: "./tests",
+  testMatch: /.*\.e2e\.js/,
   /* Maximum time one test can run for. */
   timeout: 30 * 1000,
   expect: {
@@ -22,6 +22,8 @@ const config = {
      */
     timeout: 5000,
   },
+  /* Run tests in files in parallel */
+  fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -103,4 +105,4 @@ const config = {
   // },
 };
 
-module.exports = config;
+export default config;
