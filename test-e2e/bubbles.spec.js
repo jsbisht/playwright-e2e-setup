@@ -11,6 +11,7 @@ describe("on the index page", async () => {
     await expect(page.locator(".link.login")).toHaveText("Login");
   });
   test("the page content", async ({ page }) => {
+    await page.goto(TEST_PAGE_URL);
     await expect(page.locator("h2")).toHaveText("Welcome to Bubbles City");
   });
 });
