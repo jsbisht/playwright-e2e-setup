@@ -1,0 +1,24 @@
+{
+  "name": "playwright-e2e-setup",
+  "version": "1.0.0",
+  "description": "Setting this up to learn about setting up playwright, configuration options, multiple everything",
+  "main": "index.js",
+  "scripts": {
+    "test:e2e": "npx playwright test",
+    "serve:report": "npx playwright show-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsbisht/playwright-e2e-setup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsbisht/playwright-e2e-setup/issues"
+  },
+  "homepage": "https://github.com/jsbisht/playwright-e2e-setup#readme",
+  "dependencies": {
+    "@playwright/test": "^1.20.2"
+  }
+}
